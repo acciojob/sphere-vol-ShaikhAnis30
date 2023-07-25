@@ -13,9 +13,9 @@ function volume_sphere(event) {
     if(radius != Number) volumeField.value = NaN;
     const volumeOfSphere = (4/3) * Math.PI * Math.pow(radius,3);
     volumeField.value = volumeOfSphere.toFixed(4);
-    event.preventDefault();
+    // event.preventDefault();
 } 
-//form is getting submitted to default(same page) and automatically gets refreshed, so to stop this we use
+//form is getting submitted to default(same page/same url) and automatically gets refreshed, so to stop this we use
 //event.preventDefault() 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
