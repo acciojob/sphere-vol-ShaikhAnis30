@@ -3,15 +3,14 @@
 
 function volume_sphere() {
     //Write your code here
-    let radius = parseFloat(document.getElementById("radius").value);
+    const radius = parseFloat(document.getElementById("radius").value);
     const volumeField = document.getElementById("volume");
-    // if (isNaN(radius)) {
-    //     // Step 3: Show an alert to the user for invalid input
-    //     alert("Please enter a valid number for the radius.");
-    //     return; // Exit the function if the input is invalid
-    //   }
+    if (isNaN(radius)) {
+        volumeField.value = NaN
+        return; // Exit the function if the input is invalid
+    }
     const volumeOfSphere = (4/3) * Math.PI * Math.pow(radius,3);
-    volumeField.value = String(volumeOfSphere.toFixed(2));
+    volumeField.value = volumeOfSphere.toFixed(4);
 } 
 
 
