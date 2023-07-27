@@ -3,8 +3,9 @@
 
 function volume_sphere(event) {
     //Write your code here
+	event.preventDefault();
     const radius = parseFloat(document.getElementById("radius").value);
-	// event.preventDefault();
+	
     const volumeField = document.getElementById("volume");
 	if(isNaN(radius)) {
 		volumeField.value = "NaN";
