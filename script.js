@@ -4,8 +4,12 @@
 function volume_sphere(event) {
     //Write your code here
     const radius = parseFloat(document.getElementById("radius").value);
-	event.preventDefault();
+	// event.preventDefault();
     const volumeField = document.getElementById("volume");
+	if(isNaN(radius)) {
+		volumeField.value = "NaN";
+		return;
+	}
     const volumeOfSphere = (4/3) * Math.PI * Math.pow(radius,3);
     volumeField.value = volumeOfSphere.toFixed(4);
 } 
